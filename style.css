@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  text-align: center;
+  max-width: 480px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 8px;
+  background: linear-gradient(90deg, #00f5ff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 20px rgba(0, 245, 255, 0.5);
+}
+
+.subtitle {
+  color: #aaa;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+.game-wrapper {
+  position: relative;
+  display: inline-block;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 40px rgba(0, 245, 255, 0.3), 0 0 80px rgba(255, 0, 255, 0.2);
+  border: 2px solid rgba(0, 245, 255, 0.4);
+}
+
+canvas {
+  display: block;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #0d0d1a 100%);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.overlay.hidden {
+  display: none;
+}
+
+.overlay-content {
+  text-align: center;
+  padding: 30px;
+}
+
+.overlay-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #00f5ff;
+}
+
+.overlay-content p {
+  margin-bottom: 20px;
+  color: #ccc;
+}
+
+button {
+  background: linear-gradient(90deg, #00f5ff, #ff00ff);
+  border: none;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.1rem;
+  padding: 12px 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 245, 255, 0.6);
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 1.1rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.stats span {
+  color: #00f5ff;
+  font-weight: bold;
+}
+
+.instructions {
+  margin-top: 15px;
+  color: #888;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 480px) {
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+  .game-wrapper {
+    width: 100%;
+  }
+}

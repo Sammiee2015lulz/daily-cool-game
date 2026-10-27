@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Dodger - Daily Fun Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🚀 Neon Dodger</h1>
+    <p class="subtitle">Dodge the meteors • Catch the stars • Survive!</p>
+    <div class="game-wrapper">
+      <canvas id="gameCanvas" width="400" height="600"></canvas>
+      <div class="overlay" id="overlay">
+        <div class="overlay-content">
+          <h2 id="overlay-title">Ready?</h2>
+          <p id="overlay-text">Use ← → or A/D to move</p>
+          <button id="startBtn">Start Game</button>
+        </div>
+      </div>
+    </div>
+    <div class="stats">
+      <div>Score: <span id="score">0</span></div>
+      <div>High Score: <span id="highScore">0</span></div>
+      <div>Lives: <span id="lives">3</span></div>
+    </div>
+    <p class="instructions">Arrow keys or A/D to move • Space to restart</p>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
